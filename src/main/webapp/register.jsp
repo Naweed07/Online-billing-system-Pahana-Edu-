@@ -8,7 +8,7 @@
     <title>Register Customer</title>
 </head>
 <body>
-  <h2>Register new customer</h2>
+  <h2>REGISTER NEW CUSTOMER</h2>
   <form method="post" action="${pageContext.request.contextPath}/register">
     <label>Name: <input type="text" name="name" required></label><br>
     <label>Address: <input type="text" name="address"></label><br>
