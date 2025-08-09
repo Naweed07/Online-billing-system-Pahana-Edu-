@@ -8,12 +8,17 @@
 </head>
 <body>
 <form action="LoginServlet" method="post">
-    <h2>Login</h2>
-    <input type="text" name="username" placeholder="Username" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <button type="submit">Login</button>
-    <p>Don't have an account? <a href="register.jsp">Register</a></p>
+    <h2>Staff Login</h2>
+    <input type="text" name="username" placeholder="Username" required /><br>
+    <input type="password" name="password" placeholder="Password" required /><br>
+    <button type="submit">Login</button><br>
+    <c:if test="${param.error != null}">
+        <p style="color:red;">Invalid username or password!</p>
+    </c:if>
+    <p>New user? <a href="user_register.jsp">Register here</a></p>
 </form>
+
+
 
 </body>
 </html>

@@ -7,7 +7,7 @@ public class DBUtil {
         Class.forName("com.mysql.cj.jdbc.Driver");
         String url = "jdbc:mysql://localhost:3306/pahanaedu?useSSL=false&serverTimezone=Asia/Colombo";
         String user = "pahana";          // or "root"
-        String pass = "strongpassword";  // change to your password
+        String pass = "";  // change to your password
         return DriverManager.getConnection(url, user, pass);
     }
 }

@@ -7,13 +7,17 @@
 <title>Register new user</title>
 </head>
 <body>
-<form action="RegisterServlet" method="post">
-    <h2>Register</h2>
-    <input type="text" name="username" placeholder="Username" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <button type="submit">Register</button>
-    <p>Already have an account? <a href="login.jsp">Login</a></p>
+<form action="UserRegisterServlet" method="post">
+    <h2>Staff Registration</h2>
+    <input type="text" name="username" placeholder="Username" required /><br>
+    <input type="password" name="password" placeholder="Password" required /><br>
+    <button type="submit">Register</button><br>
+    <c:if test="${param.error != null}">
+        <p style="color:red;">Registration failed. Try a different username.</p>
+    </c:if>
+    <p>Already have an account? <a href="login.jsp">Login here</a></p>
 </form>
+
 
 </body>
 </html>
